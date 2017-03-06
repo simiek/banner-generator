@@ -5,15 +5,65 @@
     <meta charset="UTF-8">
     <title>jquery template</title>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+   
     <script>
         // costom JS/jquery
         $(function(){
-            
+            $("button").click(function(){
+               var name =  $('#yourname').val(); 
+               var color2 =  $('#yourcolor').val();
+                var color =  $('#yourthing').val();
+                var award = $('#youraward').val();
+                var school =$('#yourschool').val(); 
+                 var number =$('#opacity').val(); 
+               $("div").css("background-color",color2).css("color",color)
+               $("h1").html("congladurations "+name+ " youve won an award in")
+               $("h2").html(award)
+               $("h3").html("To Show our support for this ocassion, The High school of "+school+" will be awarding you with a trophy when you actually achieve this goal. sorry buddy but win a real award XD")
+                 $("img").css("opacity",number)
+              
+            });
+       
         });
     </script>
+ <style>
+     #papergrad{
+         margin:50px;
+         background:white;
+         text-align:center;
+         width:500px;
+         height:600px;
+     }
+     .sep{
+         opacity:0;
+     }
+ </style>
 </head>
 
 <body>
+    
+    Your Name: <input type="text" id="yourname">
+    <br>
+    Your Favorite Color:<input type="text" id="yourthing">
+    <br>
+    Your second favorite Color: <input type="text" id="yourcolor">
+    <br>
+    The award you are winining (example: Youve won an awawrd for Teaching,climbing, blanking. you get it):<input type="text" id="youraward">
+    <br>
+    Your highschool: <input type="text" id="yourschool">
+    <br>
+    type 1, trust me: <input type="text" id="opacity">
+
+
+<br>
+<button>Submit</button>
+<br><br>
+<div id="papergrad"><h1></h1>
+<h2></h2>
+<h3></h3>
+<img class="sep"src="sep.jpg"></img>
+</div>
+<div></div>
 
 </body>
 
